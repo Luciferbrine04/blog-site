@@ -1,0 +1,17 @@
+{
+  "name": "blog-website",
+  "version": "1.0.0",
+  "description": "A blog website using MongoDB Atlas, Express, HTML/CSS/JS, and Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^5.13.22"
+  }
+}
