@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const content = document.getElementById('content').value;
   
         try {
-            const response = await fetch('https://blog-site-u7ek.onrender.com/posts', {
+            const response = await fetch('${process.env.BASE_URL}/posts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
 async function fetchPosts() {
     try {
-        const response = await fetch('https://blog-site-u7ek.onrender.com/posts');
+        const response = await fetch('${process.env.BASE_URL}/posts');
   
         if (!response.ok) {
             throw new Error('Failed to fetch posts');
@@ -59,7 +59,7 @@ async function fetchPosts() {
                 const postId = button.getAttribute('data-id');
   
                 try {
-                    const deleteResponse = await fetch(`https://blog-site-u7ek.onrender.com/posts/${postId}`, {
+                    const deleteResponse = await fetch(`${process.env.BASE_URL}/posts/${postId}`, {
                         method: 'DELETE',
                     });
   
