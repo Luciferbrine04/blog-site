@@ -1,4 +1,4 @@
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -26,7 +26,6 @@ mongoose.connect("mongodb+srv://luciferbrine04:KIS04han@lucy.hdza0s9.mongodb.net
     .catch(err => console.error('Failed to connect to MongoDB Atlas', err));
 
 // Start the server
-
 app.listen(process.env.PORT || 5000, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running on port ${process.env.PORT}`);
 });
